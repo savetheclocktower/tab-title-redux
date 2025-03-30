@@ -12,10 +12,6 @@ Instead of making each such temporary buffer have the same `untitled` name, we m
 
 This package has no commands, no menus, and no keybindings. When activated, it applies a patch to a text editor’s logic for what to call itself. When deactivated, it reverts the patch. It does no direct DOM manipulation.
 
-Since the window title hooks into this logic,
-
-If you have other packages installed that treat the title of a pane item as meaningful in some way — either
-
 This package does no direct DOM manipulation. Instead, it spies on `Pane` items and overwrites any `getTitle` and `getLongTitle` functions to substitute custom logic for determining the window title when the buffer is temporary. This logic reverts to the default if the buffer is saved or if this package is deactivated.
 
 Pulsar is not used to the editor’s title changing more often than the editor’s path on disk changes, so we insert extra logic to update tab titles on every keystroke that changes the first line of text.
