@@ -1,0 +1,31 @@
+{
+  "name": "tab-title-redux",
+  "main": "./lib/main",
+  "version": "0.0.1",
+  "description": "Name untitled buffers after their first-line contents",
+  "keywords": [
+    "untitled",
+    "tabs",
+    "title"
+  ],
+  "repository": "https://github.com/savetheclocktower/tab-title-redux",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "configSchema": {
+    "defaultTitle": {
+      "type": "string",
+      "default": "untitled",
+      "description": "The title given to unsaved tabs when there is no content on the first line of the editor."
+    },
+    "maximumTitleLength": {
+      "type": "number",
+      "default": 100,
+      "description": "The maximum length of a title before it’s truncated. (On tabs, text truncation should happen automatically to fit the width of the tab. But the window title is assembled from several pieces of information, and truncating long editor titles prevents the project name and path from being pushed off screen.)"
+    }
+  },
+  "devDependencies": {
+    "temp": "^0.9.4"
+  }
+}
