@@ -14,10 +14,15 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "configSchema": {
+    "searchForFirstLine": {
+      "type": "boolean",
+      "default": true,
+      "description": "When checked, will find the first non-blank row of the buffer and use that to determine the tab title. When unchecked, will search only the first row of the buffer for text, falling back to the default title if the first row is blank."
+    },
     "defaultTitle": {
       "type": "string",
       "default": "untitled",
-      "description": "The title given to unsaved tabs when there is no content on the first line of the editor."
+      "description": "The title given to unsaved tabs when there is no text to use."
     },
     "maximumTitleLength": {
       "type": "number",

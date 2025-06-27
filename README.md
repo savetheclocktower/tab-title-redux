@@ -2,7 +2,18 @@
 
 Sets the tab title of a temporary buffer (one not yet saved to disk) to match its first line contents.
 
+
+<p>
+  <img width="704" alt="pulsar-hover screenshot" src="https://raw.githubusercontent.com/savetheclocktower/tab-title-redux/main/docs/screenshot.png" />
+</p>
+
 Inspired by similar packages like [tab-title](https://web.pulsar-edit.dev/packages/tab-title) and [un-untitled](https://web.pulsar-edit.dev/packages/un-untitled); these packages were in turn inspired by a similar behavior in Sublime Text.
+
+## Configuration
+
+* **Default Title**: A fallback title in the event of a blank line or buffer. Defaults to `untitled`, just like Pulsar.
+* **Maximum Title Length**: The maximum length of a title before it’s truncated. (Tabs themselves will nearly always truncate before this point, but the tab title is repeated in the window title, and this guards against having too much text in the window title.) Defaults to `100`.
+* **Search For First Row**: When checked, will find the first non-blank row of the buffer and use that to determine the tab title. When unchecked, will search only row 1 of the buffer for text, falling back to the default title if row 1 is blank.
 
 ## How does it work?
 
