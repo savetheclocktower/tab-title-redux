@@ -14,7 +14,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "configSchema": {
-    "searchForFirstLine": {
+    "searchForFirstRow": {
       "type": "boolean",
       "default": true,
       "description": "When checked, will find the first non-blank row of the buffer and use that to determine the tab title. When unchecked, will search only the first row of the buffer for text, falling back to the default title if the first row is blank."
